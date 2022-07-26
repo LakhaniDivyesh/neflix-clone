@@ -1,0 +1,95 @@
+.navbar{
+    width: 100%;
+    color: white;
+    font-size: 14px;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    background: linear-gradient(to top,transparent 0%,rgba(0, 0, 0, 0.4) 50%);
+
+    &.scrolled{
+        background-color: var(--main-color);
+    }
+
+    .container{
+        padding: 0 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 60px;
+        .left{
+            display: flex;
+            align-items: center;
+            img{
+                height: 25px;
+                margin-right: 40px;
+            }
+            span{
+                margin: 10px;
+                cursor: pointer;
+            }
+            .menu{
+
+                .options{
+                    display: none;
+                    background-color: var(--main-color);
+                    color: white;
+                    border-radius: 5px;
+                }
+                option{
+                    padding: 5px 10px;
+                    cursor: pointer;
+                }
+                &:hover{
+                    .options{
+                    display: flex;
+                    flex-direction: column;
+                    position: absolute;
+                    }
+                }
+
+            }
+        
+        }
+        .right{
+            display: flex;
+            align-items: center;
+
+            .icon{
+                margin: 0 15px;
+                cursor: pointer;
+            }
+
+            .profile{
+                img{
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 5px;
+                    object-fit: cover;
+                    cursor: pointer;
+                }
+                .options{
+                    display: none;
+                    background-color: white;
+                    color: var(--main-color);
+                    border-radius: 5px;
+                }
+                span{
+                    padding: 5px 10px;
+                    cursor: pointer;
+                }
+
+                &:hover{
+                    .options{
+                        display: flex;
+                        flex-direction: column;
+                        position: absolute;
+                        right: 25px;
+                    }
+                }
+            }
+        }
+        
+    }
+}
+
